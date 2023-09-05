@@ -1,9 +1,17 @@
-function App() {
-  return (
-    <>
-      
-    </>
-  )
-}
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
-export default App
+import Creature from './creatures/components/Creature';
+
+const queryClient = new QueryClient();
+
+function App() {
+
+  return (
+      <QueryClientProvider client={queryClient}> 
+        <Creature />
+      </QueryClientProvider>
+  )
+
+};
+
+export default App;
