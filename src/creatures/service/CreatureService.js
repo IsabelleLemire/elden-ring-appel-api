@@ -9,7 +9,7 @@ class CreatureService {
         const res = await fetch(this.creatureUrl)
         if (!res.ok) throw new Error();
         const data = await res.json();
-        return data.results;
+        return data.data;
     }
 
     async getCreatureById(id) {
